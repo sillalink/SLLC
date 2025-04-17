@@ -1,20 +1,38 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #131422;
   --foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
+  
+  --font-poppins: ["Poppins",'sans-serif'];
+
+  --color-background: var(--foreground);
   --color-foreground: var(--foreground);
+  --color-primary: #6B2C91;
+  --color-secondary: #E3D8E9;
+  --color-gray-100: #D1D1D1;
+  --color-gray-dark: #131422;
+  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+  --shadow-glass: 0 5px 10px inset rgba(0, 0, 0, 0.05), 0 15px 30px inset rgba(0, 0, 0, 0.05), 0 30px 80px inset rgba(0, 0, 0, 0.1);
+
+  --shadow-white: 0 5px 20px inset rgba(255, 255, 255, 0.05), 0 6px 3px inset rgba(255, 255, 255, 0.05), 0 30px 20px inset rgba(255, 255, 255, 0.1);
+  --text-verySmall:10px;
+  --text-extraSmall:12px;
+  --text-small:14px;
+  --text-regular:18px;
+  --text-medium:24px;
+  --text-large:36px;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #131422;
     --foreground: #ededed;
   }
 }
@@ -23,4 +41,21 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
+  }
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
 }
