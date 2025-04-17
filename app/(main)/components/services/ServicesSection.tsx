@@ -1,6 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Title from "../Title"
+import Button from "@/app/shared/ui/Button"
 
 export default function ServicesSection() {
   // Animation variants
@@ -34,7 +36,8 @@ export default function ServicesSection() {
   }
 
   return (
-    <div className="min-h-screen  px-4 md:px-8 lg:px-16 relative overflow-hidden">
+    <div className="min-h-screen px-4 py-16 md:px-8 lg:px-16 relative overflow-hidden">
+
       {/* Title */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -42,9 +45,9 @@ export default function ServicesSection() {
         transition={{ duration: 0.5 }}
         className="text-center mb-16"
       >
-        <h2 className="text-4xl md:text-5xl font-light text-purple-500 font-serif">
-          Ser<span className="opacity-0">vices</span>
-        </h2>
+        <div className="w-full justify-center items-center">
+          <Title title1="Serv" title2="ices" />
+        </div>
       </motion.div>
 
       {/* Services Container */}
@@ -258,13 +261,10 @@ export default function ServicesSection() {
           transition={{ delay: 1.5, duration: 0.5 }}
           className="flex justify-center mt-8"
         >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-purple-700 text-white px-8 py-3 rounded-full flex items-center gap-2"
-          >
-            See More
-          </motion.button>
+
+          <Button variant="primary" className="rounded-lg">
+            See more
+          </Button>
         </motion.div>
       </motion.div>
     </div>
