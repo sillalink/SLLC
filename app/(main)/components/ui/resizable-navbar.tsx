@@ -84,7 +84,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         boxShadow: visible
           ? ""
           : "none",
-        width: visible ? "40%" : "100%",
+        width: visible ? "55%" : "100%",
         y: visible ? 20 : 0,
       }}
       transition={{
