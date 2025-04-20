@@ -1,7 +1,17 @@
+import { ReactNode } from "react";
+
 export interface CardItem {
     id: string;
     title: string;
     description: string;
+    icons: string[]
     imageUrl?: string;
-    // Add any additional fields as needed
   }
+
+export  interface Service {
+    title: string;
+    description: string;
+    icon: ReactNode;
+    delay: number;
+  }
+  

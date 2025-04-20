@@ -33,27 +33,22 @@ export function MainNavbar() {
       link: "#services",
     },
     {
-      name: "Techniques",
-      link: "#techniques",
+      name: "Experience",
+      link: "#experience",
     },
-    {
-      name: "Contact",
-      link: "#contact",
-    },
-  ]
+  ];
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    
-
     <Navbar>
       {/* Desktop Navigation */}
       <NavBody>
         <NavbarLogo />
         <NavItems items={navItems} />
         <div className="flex items-center gap-4">
-          {/* <NavbarButton variant="secondary">Login</NavbarButton> */}
-          <NavbarButton variant="primary">log in</NavbarButton>
+          <NavbarButton href="#contact" variant="primary">
+            Contact
+          </NavbarButton>
         </div>
       </NavBody>
 
@@ -76,7 +71,7 @@ export function MainNavbar() {
               key={`mobile-link-${idx}`}
               href={item.link}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="relative text-neutral-600 dark:text-neutral-300"
+              className="relative dark:text-neutral-300"
             >
               <span className="block">{item.name}</span>
             </a>
@@ -85,21 +80,13 @@ export function MainNavbar() {
             <NavbarButton
               onClick={() => setIsMobileMenuOpen(false)}
               variant="primary"
-              className="w-full"
-            >
-              Login
-            </NavbarButton>
-            <NavbarButton
-              onClick={() => setIsMobileMenuOpen(false)}
-              variant="primary"
               className="w-full text-white bg-primary"
             >
-              Sign Up
+              Contact
             </NavbarButton>
           </div>
         </MobileNavMenu>
       </MobileNav>
     </Navbar>
-
   );
 }

@@ -4,12 +4,12 @@ import { icons } from "@/app/lib/StaticData";
 import Button from "../../../shared/ui/Button";
 import { InfiniteMovingCards } from "../ui/InfiniteMovingCards";
 import { Spotlight } from "../ui/Spotlight";
-import CodeAnimation from "./CodeAnimation";
+import CodeAnimation from "./Code.Animation";
 
 const HeroSection = () => {
   return (
-    <div className="w-full flex flex-col justify-center items-center">
-      <div className="w-full flex flex-col justify-between h-screen items-center max-w-[1260px] p-3 relative overflow-hidden lg:flex-row">
+    <div id="home" className="w-full flex flex-col justify-center items-center">
+      <div className="w-full flex flex-col justify-between lg:h-screen items-center max-w-[1260px] p-3 relative overflow-hidden md:flex-row">
         <Spotlight
           className="top-0 left-1/2 -translate-x-1/2 h-[66vh] w-[50wh]"
           fill="white"
@@ -25,7 +25,7 @@ const HeroSection = () => {
         <img src="../../public/assets/ViteIcon.svg" alt="" />
         <div className="w-full flex flex-col justify-center z-10 text-center lg:text-start">
           <h2 className="text-sm text-gray-100">Start your digital journey with us now!</h2>
-          <p className="text-large font-bold text-gray-100 mt-4">
+          <p className="text-large font-extrabold text-gray-100 mt-4">
             <span className="text-primary">Sillalink –</span> Where Ideas Become
             Digital Reality!
           </p>
@@ -49,7 +49,7 @@ const HeroSection = () => {
           <CodeAnimation />
         </div>
       </div>
-      <div className=" w-full shadow-white bg-[rgba(28,27,51,0.2)]backdrop-blur-lg rounded-4xl overflow-hidden relative before:content-[''] before:absolute before:inset-0 before: before:opacity-50 before:pointer-events-none  max-w-[1260px] flex justify-center items-center">
+      <div className=" w-full shadow-white bg-[rgba(28,27,51,0.2)]backdrop-blur-lg lg:rounded-4xl overflow-hidden relative before:content-[''] before:absolute before:inset-0 before: before:opacity-50 before:pointer-events-none  max-w-[1260px] flex justify-center items-center">
         <InfiniteMovingCards items={icons} speed="normal" />
       </div>
     </div>

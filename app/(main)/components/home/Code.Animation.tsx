@@ -6,7 +6,7 @@ import LottieAnimation from '../LottieAnimation';
 
 const CodeAnimation = () => {
   return (
-    <div  className='flex w-[250px] md:w-[500px] h-[300px]'>
+    <div  className='flex w-[250px] md:w-[400px] lg:w-[500px] h-[300px]'>
      <LottieAnimation animationData={HeroAnimation} />
     </div>
   );

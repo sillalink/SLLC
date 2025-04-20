@@ -1,9 +1,8 @@
-// components/CardSlider.tsx
 'use client';
 
 import { useRef, ReactNode } from 'react';
 import { motion } from 'framer-motion';
-
+import "../../../public/assets/about2.png"
 interface CardSliderProps<T> {
   cards: T[];
   renderCard: (card: T) => ReactNode;
@@ -33,11 +32,11 @@ export function CardSlider<T>({
   };
 
   return (
-    <div className={`relative group ${className}`}>
+    <div className={`relative  group ${className}`}>
       {/* Navigation Arrows */}
       <motion.button
         onClick={() => scroll('left')}
-        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg backdrop-blur-sm transition-all -ml-2"
+        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hiddenScrollbar backdrop-blur-sm transition-all -ml-2"
         aria-label="Scroll left"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
@@ -48,7 +47,7 @@ export function CardSlider<T>({
       {/* Cards Container */}
       <div
         ref={sliderRef}
-        className="flex overflow-x-auto scrollbar-hide gap-6 py-6 px-4 scroll-snap-x-mandatory"
+        className="flex overflow-x-auto gap-2 md:gap-6 py-6 scroll-snap-x-mandatory hiddenScrollbar"
       >
         {cards.map((card, index) => (
           <motion.div

@@ -111,7 +111,8 @@ const AboutSection = () => {
 
   return (
     <motion.div
-      className="w-full"
+    id="about"
+      className="w-full relative"
       ref={sectionRef}
       style={{ opacity }}
       initial={{ opacity: 0 }}
@@ -119,7 +120,7 @@ const AboutSection = () => {
       transition={{ duration: 0.8 }}
     >
       <section className="relative flex flex-col gap-8 max-w-[1260px] w-full mx-auto px-4 py-8 md:py-12 lg:py-16">
-        <div className="w-full justify-center items-center">
+        <div className="w-full justify-center font-inspiration! items-center">
           <Title title1="About" title2="Us" />
         </div>
         {/* Main grid container - simplified for mobile */}
@@ -180,8 +181,6 @@ const AboutSection = () => {
               <Image
                 src={team1 || "/placeholder.svg"}
                 alt="Team member"
-                width={300}
-                height={400}
                 className="rounded-lg rounded-br-[80px] sm:rounded-br-[120px] md:rounded-br-[180px] rounded-bl-[80px] sm:rounded-bl-[120px] md:rounded-bl-[180px] w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover"
                 priority
               />
@@ -197,8 +196,6 @@ const AboutSection = () => {
               <Image
                 src={team3 || "/placeholder.svg"}
                 alt="Team member"
-                width={300}
-                height={400}
                 className="rounded-br-[80px] sm:rounded-br-[120px] md:rounded-br-[180px] rounded-bl-[80px] sm:rounded-bl-[120px] md:rounded-bl-[180px] w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover"
                 priority
               />
@@ -384,8 +381,7 @@ const AboutSection = () => {
                   <Image
                     src={src || "/placeholder.svg"}
                     alt={`Gallery image ${i + 1}`}
-                    width={400}
-                    height={200}
+
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />
                 </motion.div>
