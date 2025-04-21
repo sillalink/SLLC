@@ -8,7 +8,7 @@ import CodeAnimation from "./Code.Animation";
 
 const HeroSection = () => {
   return (
-    <div id="home" className="w-full flex flex-col justify-center items-center">
+    <div id="home" className="w-full flex flex-col justify-center items-center mb-26">
       <div className="w-full flex flex-col justify-between lg:h-screen items-center max-w-[1260px] p-3 relative overflow-hidden md:flex-row">
         <Spotlight
           className="top-0 left-1/2 -translate-x-1/2 h-[66vh] w-[50wh]"
@@ -25,7 +25,7 @@ const HeroSection = () => {
         <img src="../../public/assets/ViteIcon.svg" alt="" />
         <div className="w-full flex flex-col justify-center z-10 text-center lg:text-start">
           <h2 className="text-sm text-gray-100">Start your digital journey with us now!</h2>
-          <p className="text-large font-extrabold text-gray-100 mt-4">
+          <p className="text-medium  font-extrabold text-gray-100 mt-4">
             <span className="text-primary">Sillalink –</span> Where Ideas Become
             Digital Reality!
           </p>

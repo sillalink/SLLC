@@ -43,7 +43,7 @@ const CinemaCard: React.FC<CinemaCardProps> = ({
           </div>
           
           <motion.p 
-            className={`text-lg z-20${isActive ? 'text-gray-100' : 'text-gray-300'}`}
+            className={`text-lg text-gray-100 z-20${isActive ? 'text-gray-100' : 'text-gray-300'}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ 
               opacity: isActive ? 1 : 0.7,
