@@ -1,6 +1,9 @@
+"use client"
 import Footer from "./components/Footer";
+
 import { MainNavbar } from "./components/header/MainNavbar";
 import { Poppins, Inspiration } from 'next/font/google';
+import { usePathname } from 'next/navigation';
 
 // Load Poppins (with multiple weights)
 const poppins = Poppins({
@@ -21,12 +24,18 @@ export default function MainLayout({
 }: {
   children: React.ReactNode
 }) {
+  const pathname = usePathname();
+  
+  // Define paths where header and footer should be hidden
+  const hideHeaderFooterPaths = ['/login', '/signup'];
+  const shouldHideHeaderFooter = hideHeaderFooterPaths.includes(pathname);
+
   return (
     <div className={`${poppins.variable} ${inspiration.variable} font-sans`}>
       <main lang="en" className="mx-auto py-4">
-        <MainNavbar />
+        {!shouldHideHeaderFooter && <MainNavbar />}
         {children}
-        <Footer/>
+        {!shouldHideHeaderFooter && <Footer />}
       </main>
     </div>
   );
