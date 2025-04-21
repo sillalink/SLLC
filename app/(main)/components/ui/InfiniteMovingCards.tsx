@@ -81,13 +81,13 @@ export const InfiniteMovingCards = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          " flex min-w-full shrink-0 md:gap-4 md:py-4 w-max flex-nowrap",
+          " flex min-w-full shrink-0 md:gap-4 lg:py-4 w-max flex-nowrap",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
         {items.map((item, idx) => (
-          <Image key={idx} src={item.icon} alt={item.alt} className="mx-2 md:mx-6 w-10 h-10 md:w-24 md:h-24" />
+          <Image key={idx} src={item.icon} alt={item.alt} className="mx-2 md:mx-6 w-10 h-10 lg:w-24 lg:h-24 md:w-16 md:h-16"/>
         ))}
       </ul>
     </div>

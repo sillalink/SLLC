@@ -26,6 +26,8 @@ const Footer: React.FC = () => {
     { name: 'About Us', href: '#about' },
     { name: 'Services', href: '#services' },
     { name: 'Contact', href: '#contact' },
+    { name: 'Log in', href: '/login' },
+    { name: 'sign up', href: '/signup' },
   ];
 
   const legalLinks: NavLink[] = [

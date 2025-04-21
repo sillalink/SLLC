@@ -50,7 +50,7 @@ export default function RootLayout({
   
   return (
     <html lang="en">
-      <body >
+      <body>
       <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

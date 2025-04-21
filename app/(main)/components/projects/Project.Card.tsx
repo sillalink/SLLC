@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import about from "@/public/assets/about1.png"
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -25,7 +26,7 @@ function ProjectCard({
       {imageUrl && (
         <div className="h-56 overflow-hidden relative">
           <Image
-            src={imageUrl || "/placeholder.svg"}
+            src={about}
             alt="Team member"
             width={300}
             height={400}

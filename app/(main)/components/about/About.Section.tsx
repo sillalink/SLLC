@@ -2,12 +2,12 @@
 import React, { useRef } from "react";
 import Button from "../../../shared/ui/Button";
 import Image from "next/image";
-import team1 from "../../../../public/assets/team1.png";
-import team3 from "../../../../public/assets/team3.png";
-import about1 from "../../../../public/assets/about1.png";
-import about2 from "../../../../public/assets/about2.png";
-import about3 from "../../../../public/assets/about3.png";
-import aboutSectionImage from "../../../../public/assets/aboutSectionImage.png";
+import team1 from "@/public/assets/team1.png";
+import team3 from "@/public/assets/team3.png";
+import about1 from "@/public/assets/about1.png";
+import about2 from "@/public/assets/about2.png";
+import about3 from "@/public/assets/about3.png";
+import aboutSectionImage from "@/public/assets/aboutSectionImage.png";
 import { LuSparkles } from "react-icons/lu";
 import { FaStar, FaEye, FaGlobe } from "react-icons/fa6";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";

@@ -2,7 +2,7 @@
 
 :root {
   --background: #00012f;
-  --foreground: #171717;
+  --foreground: #00012f;
 }
 
 @theme inline {
@@ -38,12 +38,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #131422;
-    --foreground: #ededed;
-  }
-}
 
 body {
   background: var(--background);
