@@ -60,7 +60,7 @@ const WorkExperience = () => {
       
 
   return (
-   <main id='experience' className="py-16 px-4  sm:px-6 lg:px-8 bg-gray-dark">
+   <main id='experience' className="py-16 px-4  sm:px-6 lg:px-8 bg-indego-dark">
       <div className=" mx-auto max-w-[1260px] w-full">
         <div className="text-center mb-16">
         <Title title1='Exper' title2='ience'  />

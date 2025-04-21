@@ -3,12 +3,10 @@ import React from 'react';
 import Title from '../Title';
 import { CardItem } from '@/app/types';
 import { CardSlider } from '../CardSlider';
-import about from '@/public/assets/about1.png'
 import ProjectCard from './Project.Card';
 import icon from "@/public/assets/NextIcon.svg"
 
 const ProjectSection = () => {
-  console.log(about)
   const sampleCards: CardItem[] = [
     {
       id: '1',

@@ -21,7 +21,7 @@ const CinemaCard: React.FC<CinemaCardProps> = ({
 }) => {
   return (
     <motion.div
-      className={`relative rounded-2xl border border-primary bg-gray-dark overflow-hidden shadow-xl transition-all duration-500 ${className}`}
+      className={`relative rounded-2xl border border-primary bg-indego-dark overflow-hidden shadow-xl transition-all duration-500 ${className}`}
       initial={false}
       animate={{
         scale: isActive ? 1.05 : 0.95,

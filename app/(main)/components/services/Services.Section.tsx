@@ -27,7 +27,7 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              className={`bg-gray-dark border border-primary rounded-xl p-6 shadow-sm relative ${
+              className={`bg-indego-dark border border-primary rounded-xl p-6 shadow-sm relative ${
                 index % 2 === 1 ? "md:ml-8 lg:ml-16" : ""
               }`}
               initial={{ opacity: 0, y: 20 }}

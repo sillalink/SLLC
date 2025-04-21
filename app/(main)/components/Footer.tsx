@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
 
   if (!isMounted) {
     return (
-      <footer className="bg-gray-dark text-white pt-12 pb-6 px-4 sm:px-6 lg:px-8">
+      <footer className="bg-indego-dark text-white pt-12 pb-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Static version for SSR */}
           <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 mb-12">
@@ -104,7 +104,7 @@ const Footer: React.FC = () => {
   }
 
   return (
-    <footer className="bg-gray-dark text-white pt-12 pb-6 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-indego-dark text-white pt-12 pb-6 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Animated version for client */}
         <AnimatePresence>

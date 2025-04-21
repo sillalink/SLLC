@@ -20,7 +20,7 @@ function ProjectCard({
 }: ProjectCardProps) {
   return (
     <motion.div
-      className="bg-gray-dark rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-purple md:p-3"
+      className="bg-indego-dark rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-purple md:p-3"
       whileHover={{ y: -5 }}
     >
       {imageUrl && (
@@ -53,7 +53,7 @@ function ProjectCard({
           ))}
         </div>
         <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-          <Link href={''} className="w-full rounded-lg text-extraSmall  bg-gray-dark border border-purple px-2 py-3 text-purple hover:bg-purple hover:text-white">
+          <Link href={''} className="w-full rounded-lg text-extraSmall  bg-indego-dark border border-purple px-2 py-3 text-purple hover:bg-purple hover:text-white">
 
             Check Live Site
           </Link>

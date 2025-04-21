@@ -119,7 +119,7 @@ const AboutSection = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <section className="relative flex flex-col gap-8 max-w-[1260px] w-full mx-auto px-4 py-8 md:py-12 lg:py-16">
+      <section className="relative flex flex-col gap-8 max-w-[1260px] w-full mx-auto px-4 md:py-12 lg:py-16">
         <div className="w-full justify-center font-inspiration! items-center">
           <Title title1="About" title2="Us" />
         </div>
@@ -230,7 +230,7 @@ const AboutSection = () => {
                       transition={{ delay: i * 0.2 + 0.3, duration: 0.5 }}
                     />
                     <motion.h2
-                      className="text-2xl md:text-3xl font-bold"
+                      className="text-2xl md:text-3xl font-bold text-gray-100"
                       initial={{ opacity: 0 }}
                       animate={
                         isNumberedSectionInView
@@ -243,7 +243,7 @@ const AboutSection = () => {
                     </motion.h2>
                   </div>
                   <motion.p
-                    className="text-gray-300 text-sm md:text-base"
+                    className="text-gray-100 text-sm md:text-base"
                     initial={{ opacity: 0, y: 10 }}
                     animate={
                       isNumberedSectionInView

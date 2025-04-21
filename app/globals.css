@@ -16,7 +16,7 @@
   --color-secondary: #E3D8E9;
   --color-purple: #CBACF9;
   --color-gray-100: #D1D1D1;
-  --color-gray-dark: #00012f;
+  --color-indego-dark: #00012f;
 
   --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
   --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;

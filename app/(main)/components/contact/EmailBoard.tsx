@@ -99,7 +99,7 @@ const EmailBoard: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-dark py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center bg-indego-dark py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <motion.div
         className="w-full relative max-w-6xl rounded-2xl shadow-xl overflow-hidden backdrop-blur-lg border border-white/10"
         initial={{ opacity: 0, scale: 0.95 }}
