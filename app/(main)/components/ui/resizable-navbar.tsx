@@ -183,7 +183,7 @@ export const MobileNavMenu = ({ children, className, isOpen, onClose }: MobileNa
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className={cn(
-            "absolute inset-x-0  bg-gradient-to-t from-gray-dark to-primary top-12 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-lg px-4 py-8  ",
+            "absolute bg-gradient-to-t from-indego-dark to-primary top-12 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-lg px-4 py-8  ",
             className,
           )}
         >

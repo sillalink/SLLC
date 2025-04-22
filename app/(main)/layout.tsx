@@ -27,15 +27,17 @@ export default function MainLayout({
   const pathname = usePathname();
   
   // Define paths where header and footer should be hidden
-  const hideHeaderFooterPaths = ['/login', '/signup'];
-  const shouldHideHeaderFooter = hideHeaderFooterPaths.includes(pathname);
+  const hideHeaderPaths = ["/verification" , "/forget-password" , "/reset-pass"];
+  const hideFooterPaths = ['/login', '/signup',hideHeaderPaths];
+  const shouldHideFooter = hideFooterPaths.includes(pathname);
+  const shouldHideHeader = hideHeaderPaths.includes(pathname);
 
   return (
     <div className={`${poppins.variable} ${inspiration.variable} font-sans`}>
       <main lang="en" className="mx-auto py-4">
-        {!shouldHideHeaderFooter && <MainNavbar />}
+      {!shouldHideHeader && <MainNavbar />}
         {children}
-        {!shouldHideHeaderFooter && <Footer />}
+        {!shouldHideFooter && <Footer />}
       </main>
     </div>
   );

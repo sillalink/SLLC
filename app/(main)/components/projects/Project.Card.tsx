@@ -3,7 +3,6 @@ import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import about from "@/public/assets/about1.png"
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -11,7 +10,6 @@ interface ProjectCardProps {
   children?: ReactNode;
   icons?: string[];
 }
-
 function ProjectCard({
   title,
   description,
@@ -26,28 +24,27 @@ function ProjectCard({
       {imageUrl && (
         <div className="h-56 overflow-hidden relative">
           <Image
-            src={about}
+            src={imageUrl}
             alt="Team member"
-            width={300}
-            height={400}
-            className="rounded-br-[80px] sm:rounded-br-[120px] md:rounded-br-[180px] rounded-bl-[80px] sm:rounded-bl-[120px] md:rounded-bl-[180px] w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover"
+
+            className=" h-full"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
         </div>
       )}
       <div className="p-6 flex-grow flex flex-col">
-        <h3 className="text-2xl font-semibold text-gray-100 mb-3">{title}</h3>
+        <h3 className="text-2xl font-semibold text-gray-100 mb-3 uppercase">{title}</h3>
         <p className="text-gray-100 mb-6 text-small">{description}</p>
       </div>
       <div className="w-full flex flex-wrap gap-4 p-3 justify-between items-center">
-        <div className="flex">
+        <div className="flex justify-center items-center">
           {icons?.map((icon: string , idx) => (
             <Image
               key={idx}
               src={icon}
               alt={icon}
-              className="p-1 shadow-icon mx-[-1px] rounded-full"
+              className="p-1 shadow-icon mx-[-1px] rounded-full w-6 md:w-9"
 
             ></Image>
           ))}

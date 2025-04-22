@@ -4,55 +4,85 @@ import Title from '../Title';
 import { CardItem } from '@/app/types';
 import { CardSlider } from '../CardSlider';
 import ProjectCard from './Project.Card';
-import icon from "@/public/assets/NextIcon.svg"
+import MuiIcon from '@/public/assets/MUIicon.svg'
+import figmaIcon from '@/public/assets/figmaIcon.svg'
+import ReactIcon from '@/public/assets/ReactIcon.svg'
+import CssIcon from '@/public/assets/CssIcon.svg'
+import NodeIcon from '@/public/assets/NodeIcon.svg'
+import JavaScriptIcon from '@/public/assets/JavaScriptIcon.svg'
+import MongoIcon from '@/public/assets/MongoIcon.svg'
+import TypeScriptIcon from '@/public/assets/TypeScriptIcon.svg'
+import NextIcon from '@/public/assets/NextIcon.svg'
+import TailwindIcon from '@/public/assets/tailwindIcon.svg'
+import FlutterIcon from '@/public/assets/FlutterIcon.svg'
+import HtmlIcon from '@/public/assets/HtmlIcon.svg'
+import nestjs from '@/public/assets/nestjs.svg'
+import hyperMartex from "@/public/assets/HyperMartx.svg"
+import scentora from "@/public/assets/scentora.svg"
+import dbhamz from "@/public/assets/Dbhamz.svg"
+import mechanic from "@/public/assets/mechanic.svg"
+import dashboard from "@/public/assets/dashboard.svg"
+import SillaFood from "@/public/assets/sillaFood.svg"
 
 const ProjectSection = () => {
   const sampleCards: CardItem[] = [
     {
-      id: '1',
-      title: 'Project One',
-      description: 'Innovative solution for modern problems with cutting-edge technology.',
-      imageUrl: '@/public/assets/about1.png',
+      id: '5',
+      title: 'Silla Food',
+      description: 'Performance optimized for the best user experience.',
+      imageUrl: SillaFood,
       icons: [
-        icon , icon , icon
-      ]
-    },
-    {
-      id: '2',
-      title: 'Project Two',
-      description: 'Revolutionary platform transforming user experiences.',
-      imageUrl: '@/public/assets/about1.png',
-      icons: [
-        icon , icon , icon
+        TailwindIcon ,figmaIcon, FlutterIcon , NodeIcon ,nestjs
       ]
     },
     {
       id: '3',
-      title: 'Project Three',
+      title: 'Scentora',
       description: 'Elegant design meets powerful functionality.',
-      imageUrl: '@/public/assets/about1.png',
+      imageUrl: scentora,
       icons: [
-        icon , icon , icon
-      ]
-    },
-    {
-      id: '4',
-      title: 'Project Four',
-      description: 'Scalable architecture for growing businesses.',
-      imageUrl: '@/public/assets/about1.png',
-      icons: [
-        icon , icon , icon, icon , icon, icon , icon , icon , icon
+        NextIcon , TailwindIcon , TypeScriptIcon, nestjs,figmaIcon
       ]
     },
     {
       id: '5',
-      title: 'Project Five',
+      title: 'كراج الجوارح',
       description: 'Performance optimized for the best user experience.',
-      imageUrl: '@/public/assets/about1.png',
+      imageUrl: mechanic,
       icons: [
-        icon , icon , icon
+        NextIcon , FlutterIcon , TypeScriptIcon,nestjs
       ]
     },
+    {
+      id: '1',
+      title: 'HyperMartx',
+      description: 'Innovative solution for modern problems with cutting-edge technology.',
+      imageUrl: hyperMartex,
+      icons: [
+        MuiIcon , CssIcon , figmaIcon ,HtmlIcon,nestjs
+      ]
+    },
+    {
+      id: '2',
+      title: 'Dbhamz',
+      description: 'Revolutionary platform transforming user experiences.',
+      imageUrl: dbhamz,
+      icons: [
+        ReactIcon , NodeIcon , JavaScriptIcon
+      ]
+    },
+  
+    {
+      id: '4',
+      title: 'Dashboard',
+      description: 'Scalable architecture for growing businesses.',
+      imageUrl: dashboard,
+      icons: [
+        NextIcon , MongoIcon , TypeScriptIcon, HtmlIcon , TailwindIcon
+      ]
+    },
+
+ 
   ];
 
   return (

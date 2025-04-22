@@ -127,7 +127,7 @@ const Footer: React.FC = () => {
 
             <motion.div
               variants={containerVariants}
-              className="grid grid-cols-2 md:flex gap-6 md:gap-10"
+              className="w-full flex gap-2 text-[9px] md:text-small justify-center md:justify-end md:flex md:gap-6 "
             >
               {links.map((link) => (
                 <motion.div key={link.name} variants={itemVariants}>

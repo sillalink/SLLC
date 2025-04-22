@@ -4,7 +4,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
-import CinemaCard from './WorkExperience/CinemaCard';
+import CinemaCard from './WorkExperience/WorkCards';
 
 interface CinemaSliderProps {
   cards: {

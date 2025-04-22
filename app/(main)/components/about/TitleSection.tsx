@@ -19,10 +19,10 @@ const TitleSection = React.forwardRef<HTMLDivElement, TitleSectionProps>(
     >
       <div className="space-y-4 md:space-y-6 max-w-xl">
         <motion.h1
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-100"
           variants={itemVariants}
         >
-          The People <br className="hidden sm:block" />
+          The People <br className="hidden  sm:block" />
           Behind <br className="hidden sm:block" />
           <motion.span
             className="text-purple-500"

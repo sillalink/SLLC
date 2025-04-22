@@ -22,19 +22,19 @@ export function MainNavbar() {
     },
     {
       name: "About Us",
-      link: "#about",
+      link: "/#about",
     },
     {
       name: "Projects",
-      link: "#projects",
+      link: "/#projects",
     },
     {
       name: "Services",
-      link: "#services",
+      link: "/#services",
     },
     {
       name: "Experience",
-      link: "#experience",
+      link: "/#experience",
     },
   ];
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -46,7 +46,7 @@ export function MainNavbar() {
         <NavbarLogo />
         <NavItems items={navItems} />
         <div className="flex items-center gap-4">
-          <NavbarButton href="#contact" variant="primary">
+          <NavbarButton href="/#contact" variant="primary">
             Contact
           </NavbarButton>
         </div>
