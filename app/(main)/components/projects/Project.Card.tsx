@@ -18,16 +18,15 @@ function ProjectCard({
 }: ProjectCardProps) {
   return (
     <motion.div
-      className="bg-indego-dark rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-purple md:p-3"
+      className="bg-indego-dark rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-purple md:p-3 pb-3"
       whileHover={{ y: -5 }}
     >
       {imageUrl && (
-        <div className="h-56 overflow-hidden relative">
+        <div className="h-56 overflow-hidden p-3 relative">
           <Image
             src={imageUrl}
             alt="Team member"
-
-            className=" h-full"
+            className=" h-full rounded-2xl"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />

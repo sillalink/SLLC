@@ -34,7 +34,7 @@ export function CardSlider<T>({
   return (
     <div className={`relative  group ${className}`}>
       {/* Navigation Arrows */}
-      <motion.button
+      {/* <motion.button
         onClick={() => scroll('left')}
         className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hiddenScrollbar backdrop-blur-sm transition-all -ml-2"
         aria-label="Scroll left"
@@ -42,7 +42,7 @@ export function CardSlider<T>({
         whileTap={{ scale: 0.95 }}
       >
         <ChevronLeftIcon />
-      </motion.button>
+      </motion.button> */}
 
       {/* Cards Container */}
       <div
@@ -63,15 +63,14 @@ export function CardSlider<T>({
         ))}
       </div>
 
-      <motion.button
+      {/* <motion.button
         onClick={() => scroll('right')}
         className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg backdrop-blur-sm transition-all -mr-2"
         aria-label="Scroll right"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >
-        <ChevronRightIcon />
-      </motion.button>
+      </motion.button> */}
     </div>
   );
 }
