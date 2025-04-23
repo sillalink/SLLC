@@ -18,18 +18,18 @@ export function CardSlider<T>({
 }: CardSliderProps<T>) {
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  const scroll = (direction: 'left' | 'right') => {
-    if (sliderRef.current) {
-      const cardElement = sliderRef.current.querySelector('.card-slider-item');
-      if (cardElement) {
-        const scrollAmount = cardElement.clientWidth + 24; // 24px for gap
-        sliderRef.current.scrollBy({
-          left: direction === 'left' ? -scrollAmount : scrollAmount,
-          behavior: 'smooth',
-        });
-      }
-    }
-  };
+  // const scroll = (direction: 'left' | 'right') => {
+  //   if (sliderRef.current) {
+  //     const cardElement = sliderRef.current.querySelector('.card-slider-item');
+  //     if (cardElement) {
+  //       const scrollAmount = cardElement.clientWidth + 24; // 24px for gap
+  //       sliderRef.current.scrollBy({
+  //         left: direction === 'left' ? -scrollAmount : scrollAmount,
+  //         behavior: 'smooth',
+  //       });
+  //     }
+  //   }
+  // };
 
   return (
     <div className={`relative  group ${className}`}>
