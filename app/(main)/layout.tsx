@@ -34,7 +34,7 @@ export default function MainLayout({
 
   return (
     <div className={`${poppins.variable} ${inspiration.variable} font-sans`}>
-      <main lang="en" className="mx-auto py-4">
+      <main lang="en" className="mx-auto bg-indego-dark py-4">
       {!shouldHideHeader && <MainNavbar />}
         {children}
         {!shouldHideFooter && <Footer />}

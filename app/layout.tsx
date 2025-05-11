@@ -2,6 +2,8 @@
 import type { Metadata } from "next";
 import { Poppins } from 'next/font/google';
 import "./globals.css";
+import Providers from "./provider";
+import { ToastProvider } from "./shared/Toast/ToastProvider";
 
 
 const poppins = Poppins({
@@ -21,7 +23,7 @@ export const metadata: Metadata = {
     "custom software",
     "IT consulting"
   ],
-  icons:{
+  icons: {
     icon: "/Silla-Link-compnay.svg"
   },
   openGraph: {
@@ -47,33 +49,31 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   // أضف هذا الجزء لتحديد أي layout يعرض
-  
+
   return (
     <html lang="en">
       <body>
-      <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "SillaLink Company",
-              "url": "https://www.sillalink.com",
-              "logo": "https://www.sillalink.com/logo.png",
-              "sameAs": [
-                "https://twitter.com/sillalink",
-                "https://linkedin.com/company/sillalink"
-              ]
-            })
-          }}
-        />
-        {/* {!isAdmin && (
-          <div className="landing-header">Header for Landing</div>
-        )} */}
-        {children}
-        {/* {!isAdmin && (
-          <div className="landing-footer">Footer for Landing</div>
-        )} */}
+        <Providers>
+          <ToastProvider>
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "Organization",
+                  "name": "SillaLink Company",
+                  "url": "https://www.sillalink.com",
+                  "logo": "https://www.sillalink.com/logo.png",
+                  "sameAs": [
+                    "https://twitter.com/sillalink",
+                    "https://linkedin.com/company/sillalink"
+                  ]
+                })
+              }}
+            />
+            {children}
+          </ToastProvider>
+        </Providers>
       </body>
     </html>
   );

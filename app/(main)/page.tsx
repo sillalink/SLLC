@@ -9,9 +9,12 @@ import ProjectSection from './components/projects/Project.Section';
 import WorkExperience from './components/WorkExperience/Work.Section';
 import ContactSection from './components/contact/Contact.Section';
 
+import { useQuery } from '@tanstack/react-query';
+
+
 export default function HomePage() {
   return (
-    <div className='w-full relative overflow-hidden'>
+    <div className='w-full relative overflow-hidden bg-indego-dark'>
       <HeroSection />
       <AboutSection />
       <ServicesSection />

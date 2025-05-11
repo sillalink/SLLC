@@ -3,20 +3,35 @@ import { useState } from "react";
 import { AuthFormInput } from './../components/AuthFormInput';
 import { AuthTabs } from './../components/AuthTabs';
 import { AuthFormContainer } from './../components/AuthFormContainer';
+import { useToast } from "@/app/hooks/useToast";
 
-import Link from "next/link";
+type FormState = {
+  email: string;
+  password: string;
+  confirmPassword: string;
+  username: string;
+}
 
 const SignupPage = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [username, setUsername] = useState("");
   const [activeTab, setActiveTab] = useState<"login" | "signup">("signup");
+  const toast = useToast();
+  const [form, setForm] = useState<FormState>({
+    email: "",
+    password: '',
+    confirmPassword: '',
+    username: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { id, value } = e.target;
+    setForm(prev => ({ ...prev, [id]: value }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle signup logic here
-    console.log({ email, password, confirmPassword, username });
+    if (form.password !== form.confirmPassword){
+      toast.success('Item added to cart!');
+    }
   };
 
   return (
@@ -31,32 +46,32 @@ const SignupPage = () => {
           id="username"
           label="Username"
           type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          value={form.username}
+          onChange={handleChange}
         />
 
         <AuthFormInput
           id="email"
           label="Email Address"
           type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          value={form.email}
+          onChange={handleChange}
         />
 
         <AuthFormInput
           id="password"
           label="Password"
           type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          value={form.password}
+          onChange={handleChange}
         />
 
         <AuthFormInput
           id="confirmPassword"
           label="Confirm Password"
           type="password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
+          value={form.confirmPassword}
+          onChange={handleChange}
         />
 
         <div className="w-full flex justify-center md:justify-end my-10">
