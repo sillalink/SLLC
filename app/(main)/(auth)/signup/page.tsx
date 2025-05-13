@@ -3,7 +3,8 @@ import { useState } from "react";
 import { AuthFormInput } from './../components/AuthFormInput';
 import { AuthTabs } from './../components/AuthTabs';
 import { AuthFormContainer } from './../components/AuthFormContainer';
-import { useToastHook } from "@/app/shared/Toast/ToastProvider";
+import { useToast } from "@/app/shared/Toast/useToast";
+
 type FormState = {
   email: string;
   password: string;
@@ -12,7 +13,8 @@ type FormState = {
 }
 
 const SignupPage = () => {
-  const { toastSuccess, toastError } = useToastHook();
+
+  const {addToast} = useToast()
   const [activeTab, setActiveTab] = useState<"login" | "signup">("signup");
   const [form, setForm] = useState<FormState>({
     email: "",
@@ -29,7 +31,11 @@ const SignupPage = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (form.password !== form.confirmPassword){
-      toastSuccess('Item added to cart!');
+      addToast('Operation completed successfully!', {
+      type: 'success',
+      duration: 5000,
+      position: 'top-center'
+    })
     }
   };
 

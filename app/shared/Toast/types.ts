@@ -1,23 +1,23 @@
-// components/Toast/types.ts
-export type ToastPosition = 
+export type ToastPosition =
   | 'top-left'
   | 'top-center'
   | 'top-right'
   | 'bottom-left'
   | 'bottom-center'
-  | 'bottom-right';
+  | 'bottom-right'
 
-export type ToastType = 'success' | 'error' | 'warning' | 'info';
+export type ToastType = 'success' | 'error' | 'warning' | 'info' | 'default'
 
 export interface Toast {
-  id: string;
-  message: string;
-  type: ToastType;
-  duration?: number;
+  id: string
+  message: string
+  type: ToastType
+  duration?: number
+  position?: ToastPosition
 }
 
-export interface ToastContextType {
-  toasts: Toast[];
-  addToast: (message: string, type: ToastType, duration?: number) => void;
-  removeToast: (id: string) => void;
+export interface ToastOptions {
+  type?: ToastType
+  duration?: number
+  position?: ToastPosition
 }

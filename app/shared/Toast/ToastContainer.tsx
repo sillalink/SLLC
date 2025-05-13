@@ -1,26 +1,33 @@
-// components/Toast/ToastContainer.tsx
-'use client';
+import React from 'react'
+import Toast from './Toast'
+import { Toast as ToastType, ToastPosition } from './types'
+import { getPositionStyles } from './style'
 
-import React from 'react';
-import ToastItem from './Toast';
-import { useToast } from '@/app/context/ToastContext';
+interface ToastContainerProps {
+  toasts: ToastType[]
+  position?: ToastPosition
+  removeToast: (id: string) => void
+}
 
-const ToastContainer: React.FC = () => {
-  const { toasts, removeToast } = useToast();
-
-  if (toasts.length === 0) return null;
-
+const ToastContainer: React.FC<ToastContainerProps> = ({
+  toasts,
+  position = 'top-right',
+  removeToast,
+}) => {
   return (
-    <>
+    <div
+      className={`fixed z-50 space-y-3 ${getPositionStyles(position)}`}
+      aria-live="assertive"
+    >
       {toasts.map((toast) => (
-        <ToastItem
+        <Toast
           key={toast.id}
           {...toast}
-          onClose={removeToast}
+          onRemove={removeToast}
         />
       ))}
-    </>
-  );
-};
+    </div>
+  )
+}
 
-export default ToastContainer;
+export default ToastContainer
